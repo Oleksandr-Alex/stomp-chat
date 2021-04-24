@@ -13,6 +13,14 @@ body {
     border-radius: 5px;
 }
 
+#messenger, #conversation {
+    display: none;
+}
+
+#name {
+    width: 200px;
+}
+
 [class*="col-"] {
     margin-bottom: 13px;
 }

@@ -13,7 +13,6 @@ import org.springframework.messaging.simp.SimpMessageSendingOperations;
 import org.springframework.messaging.simp.annotation.SubscribeMapping;
 import org.springframework.stereotype.Controller;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
@@ -28,9 +27,8 @@ public class ChatController {
     private final SimpMessageSendingOperations messagingTemplate;
 
     @SubscribeMapping("/chat/{roomId}/old-messages")
-    public List<Message> getOldChatMessages() {
-
-        return Collections.emptyList();
+    public List<Message> getChatOldMessages(@DestinationVariable UUID roomId) {
+        return messageService.getChatOldMessages(roomId);
     }
 
     @MessageMapping("/chat/{roomId}/send-message")
