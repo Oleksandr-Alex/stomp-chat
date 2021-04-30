@@ -3,7 +3,6 @@ package com.alexb.chat.controller;
 import com.alexb.chat.document.Message;
 import com.alexb.chat.dto.NewMessageDto;
 import com.alexb.chat.service.MessageService;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
