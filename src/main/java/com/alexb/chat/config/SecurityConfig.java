@@ -19,12 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .logout()
                     .invalidateHttpSession(true)
                     .clearAuthentication(true)
-                    .logoutSuccessUrl("/logout");
+                    .logoutSuccessUrl("/");
     }
-
-//    @Override
-//    public void configure(WebSecurity web) {
-//        web.ignoring().antMatchers("/login");
-//    }
 
 }
